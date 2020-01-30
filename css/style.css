@@ -7,13 +7,15 @@
 body{
   display: flex;
   height: 100vh;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .wrapper{
   height: 600px;
   width: 600px;
-  /* border: 1px solid red; */
-  margin: auto;
+  border: 1px solid red;
 }
 
 .square{

@@ -1,25 +1,32 @@
 $(document).ready(function () {
-  var num = 2;
-
+  for (var i = 0; i < 36; i++) {
+    $('.js_made').append('<div class="square"></div>');
+  }
   $('.square').click(function () {
+    var selected = $(this);
     $.ajax(
-      {
-        url: "https://flynn.boolean.careers/exercises/api/random/int",
+      { url: "https://flynn.boolean.careers/exercises/api/random/int",
         method: "GET",
-        success: function (data, stato) {
+        success: function (data, stato)
+        {
           console.log(data.response);
+          game(data.response);
         },
-        error: function (richiesta, stato, errori) {
+        error: function (richiesta, stato, errore)
+        {
           alert("E' avvenuto un errore. " + errore);
         }
       }
     );
-    $(this).text(num);
-    if (num <= 5) {
-      $(this).addClass('yellow');
-    }else {
-      $(this).addClass('red');
-    }
+    function game(numero) {
+      selected.text(numero);
+      if (numero <= 5) {
+        selected.addClass('yellow');
+      }else {
+        selected.addClass('red');
+      }
+    };
+
   });
 
 });
