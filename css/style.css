@@ -28,12 +28,12 @@ body{
   align-items: center;
   font-size: 25px;
   font-weight: 700;
-  color: green;
+  color: blue;
 }
 
 .yellow{
   background-color: yellow;
 }
-.red{
-  background-color: red;
+.green{
+  background-color: green;
 }

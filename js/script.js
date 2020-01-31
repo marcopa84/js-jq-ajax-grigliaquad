@@ -22,8 +22,8 @@ $(document).ready(function () {
       selected.text(numero);
       if (numero <= 5) {
         selected.addClass('yellow');
-      }else {
-        selected.addClass('red');
+      }else if (numero > 5) {
+        selected.addClass('green');
       }
     };
 
