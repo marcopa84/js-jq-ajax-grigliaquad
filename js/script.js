@@ -21,8 +21,10 @@ $(document).ready(function () {
     function game(numero) {
       selected.text(numero);
       if (numero <= 5) {
+        selected.removeClass('green');
         selected.addClass('yellow');
       }else if (numero > 5) {
+        selected.removeClass('yellow');
         selected.addClass('green');
       }
     };
